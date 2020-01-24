@@ -1,9 +1,10 @@
 const express = require('express')
 const controller = require('../controllers/car')
+const passport = require('passport')
 const router = express.Router()
 
 // localhost:5000/api/car
-router.get('/', controller.getAll)
+router.get('/', passport.authenticate('jwt', {session: false}), controller.getAll)
 
 // localhost:5000/api/car
 router.post('/', controller.create)

@@ -1,6 +1,6 @@
 module.exports.getAll = function(req, res) {
-    res.status(200).json({
-        car: 'car from controller'
+    res.json({
+        message: 'cars'
     })
 }
 
