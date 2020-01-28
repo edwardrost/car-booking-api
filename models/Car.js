@@ -14,8 +14,8 @@ const carSchema = new Schema({
         default: ''
     },
     carAvailable: {
-        type: Boolean,
-        default: true
+        type: String,
+        default: 'true'
     },
     user: {
         ref: 'users',
