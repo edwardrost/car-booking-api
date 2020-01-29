@@ -38,9 +38,12 @@ module.exports.getById = async function(req, res) {
 
 module.exports.update = async function(req, res) {
     try {
+        /* if req.body.carImage !=== await Car.findOne({_id: req.params.id}).carImage {
+            up
+        } */
         const car = await Car.findOneAndUpdate(
             {_id: req.params.id},
-            {$set: req.body},
+            {$set: req.body },
             {new: true}
         )
         res.status(200).json(car)

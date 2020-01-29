@@ -9,7 +9,7 @@ const keys = require('./config/keys')
 
 const app = express()
 
-mongoose.connect(keys.mongoURI, { useNewUrlParser: true,  useUnifiedTopology: true, useCreateIndex: true } )
+mongoose.connect(keys.mongoURI, { useNewUrlParser: true,  useUnifiedTopology: true, useCreateIndex: true, useFindAndModify: false } )
     .then(() => console.log('MongoDB connected'))
     .catch(error => console.log(error))
 

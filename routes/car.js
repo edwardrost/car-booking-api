@@ -14,7 +14,7 @@ router.post('/', passport.authenticate('jwt', {session: false}), upload.single('
 router.get('/:id', controller.getById)
 
 // localhost:5000/api/car/:id
-router.patch('/:id', passport.authenticate('jwt', {session: false}), upload.single('carImage'), controller.update)
+router.patch('/:id', passport.authenticate('jwt', {session: false}), controller.update)
 
 // localhost:5000/api/car/:id
 router.delete('/:id', controller.remove)
